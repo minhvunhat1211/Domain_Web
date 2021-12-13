@@ -1,0 +1,257 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; 
+  width: 100%;
+  height: 100%;
+  background-color: #f2f3f5;
+}
+/*menu bar*/
+.menu-bar{
+  margin: 0 auto;
+}
+nav{
+  height: 100px;
+  background: #333333;
+}
+.logo{
+  padding-top: 25px;
+  padding-left: 80px;
+}
+nav ul{
+  padding: 0;
+  margin: 0;
+  float: right;
+  margin-right: 30px;
+}
+nav ul li{
+  background: #333333;
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  z-index: 200;
+}
+nav ul li a{
+  display:  block;
+  padding: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 100px;
+}
+nav ul li a:hover{
+  background: #8fc151;
+}
+nav ul ul{
+  position: absolute;
+  top: 100px;
+  display: none;
+
+}
+nav ul li:hover > ul{
+  display: block;
+}
+nav ul ul li{
+  height: 70px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  position: relative;
+  border-bottom: solid 1px white;
+}
+.Customer-login{
+  background-color: #8fc151;
+  color: black;
+}
+nav ul li ul li a{
+  font-size: 13px;
+  display: block;
+  text-align: center;
+}
+.banner{
+  width: 100%;
+  height: 300px;
+  background-image: url(images/banner.jpg);
+  background-size: 1366px 300px;
+  text-align: center;
+  vertical-align: center;
+  color: white;
+}
+.banner-text{
+  padding-top: 1px;
+  position: relative;
+  top:35%;
+  font-size: 20px; 
+}
+.wrap-dummy-text{
+  width: 100%;
+  height: 200px;
+  margin-top: 100px;
+  /*text-align: center;*/
+}
+.dummy-text{
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+.dummy-text>h3{
+  font-size: 42px;
+}
+.dummy-text>p{
+  font-size: 18px;
+  color: #b3ada8;
+}
+.wrap-content{
+  width: 100%;
+  height: 370px;
+}
+.content{
+  width: 80%;
+  height: 370px;
+  margin: auto;
+  display: flex;
+}
+.content-text{
+  width: 50%;
+  height: 370px;
+}
+.content-text>h4{
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 0 5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  color: #999;
+}
+.content-text>h2{
+  font-size: 40px;
+  font-weight: 400;
+  padding: 0 0 10px;
+  margin: 0;
+  line-height: 40px;
+  margin-top: 0;
+  text-transform: none;
+}
+.content-text>p{
+  margin-bottom: 20px;
+  color:#b3ada8; 
+}
+.content-text>button{
+  height: 48px;
+  width: 150px;
+  background-color: black;
+  border: none;
+}
+.content-text>button:hover{
+  background-color: #9dc15b;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.content-img{
+  width: 50%;
+  height: 370px;
+}
+.content-img>img{
+  width: 100%;
+  height: 100%;
+}
+.wrap-content1{
+  margin-top: 50px;
+  width: 100%;
+  height: 370px;
+}
+.content1{
+  width: 80%;
+  height: 370px;
+  margin: auto;
+  display: flex;
+}
+.content-img1{
+  width: 50%;
+  height: 370px;
+}
+.content-img1>img{
+  width: 95%;
+  height: 95%;
+}
+.content-text1{
+  width: 50%;
+  height: 370px;
+}
+.content-text1>h2{
+  font-size: 38px;
+  font-weight: 400;
+  padding: 0 0 10px;
+  margin: 0;
+  line-height: 40px;
+  margin-top: 0;
+}
+.content-text1>p{
+  margin-bottom: 20px;
+  color:#b3ada8
+}
+.content-text1>button{
+  height: 48px;
+  width: 150px;
+  background-color: black;
+  border: none;
+}
+.content-text1>button:hover{
+  background-color: #9dc15b;
+  cursor: pointer;
+  transition: 0.2s;
+}
+p{
+  font-size:20px;
+  text-decoration: none;
+  color:#429E9D;
+}
+
+h1{
+  font-size: 1.5em;
+  color: #9dc15b;
+  margin : 2% 0px 0px 40%;
+}
+.box{
+  background:#cbd1cc;
+  width:600px;
+  margin: 5% 0px 0px 30%;
+  padding:0px 0px 2% 2%;
+  border: #89a653 8px solid; 
+}
+
+.labelInputArea {
+    display:table-row;
+    font-size:20px;
+    text-decoration: none;
+    color:#429E9D;
+}
+.labelInputArea label
+{
+    text-align:left;
+    display:table-cell;
+}
+
+.labelInputArea input
+{
+    text-align:left;
+    display:table-cell;
+}
+
+
+.footer{
+  background-image: url(images/world-map.png);
+  height: 451px;
+  width: 100%;
+  border: solid 1px;
+  background-color: black;
+  position: relative;
+  top:200px;
+}
+.footer-text{
+  color: #ffff;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 100px;
+}

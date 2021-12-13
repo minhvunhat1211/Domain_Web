@@ -1,0 +1,188 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; 
+  width: 100%;
+  height: 100%;
+  background-color: #f2f3f5;
+}
+/*menu bar*/
+.menu-bar{
+  margin: 0 auto;
+}
+nav{
+  height: 100px;
+  background: #333333;
+}
+.logo{
+  padding-top: 25px;
+  padding-left: 80px;
+}
+nav ul{
+  padding: 0;
+  margin: 0;
+  float: right;
+  margin-right: 30px;
+}
+nav ul li{
+  background: #333333;
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  z-index: 200;
+}
+nav ul li a{
+  display:  block;
+  padding: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 100px;
+}
+nav ul li a:hover{
+  background: #8fc151;
+}
+nav ul ul{
+  position: absolute;
+  top: 100px;
+  display: none;
+
+}
+nav ul li:hover > ul{
+  display: block;
+}
+nav ul ul li{
+  height: 70px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  position: relative;
+  border-bottom: solid 1px white;
+}
+.Customer-login{
+  background-color: #8fc151;
+  color: black;
+}
+nav ul li ul li a{
+  font-size: 13px;
+  display: block;
+  text-align: center;
+}
+.banner{
+  width: 100%;
+  height: 300px;
+  background-image: url(images/banner.jpg);
+  background-size: 1366px 300px;
+  text-align: center;
+  vertical-align: center;
+  color: white;
+}
+.banner-text{
+  padding-top: 1px;
+  position: relative;
+  top:35%;
+  font-size: 20px; 
+}
+.wrap-dummy-text{
+  width: 100%;
+  height: 200px;
+  margin-top: 100px;
+  /*text-align: center;*/
+}
+.dummy-text{
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+.dummy-text>h3{
+  font-size: 42px;
+}
+.dummy-text>p{
+  font-size: 18px;
+  color: #b3ada8;
+}
+.content{
+  width: 100%;
+  height: 500px;
+  display: flex;
+}
+.left{
+  width: 50%;
+  height: 100%;
+  background-color: #333333;
+
+}
+.wrap-inside-left{
+  width: 100%;
+  height: 40%;
+  display: flex;
+}
+.left-inside{
+  width: 50%;
+  height: 100%;
+  margin-top: 15px;
+}
+.right-inside{
+  width: 50%;
+  height: 100%;
+  margin-top: 15px;
+}
+.middle{
+  width: 95%;
+  height: 40%;
+  position: relative;
+  top: 15px;
+  margin: 0 auto;
+  border: none;
+}
+.middle>input{
+  height: 100%;
+  width: 99%;
+  border-radius: 5px;
+}
+.input{
+  width: 90%;
+  height: 55px;
+  margin: auto;
+  display: block;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  border: none;
+}
+.bottom{
+  width: 30%;
+  height: 45px;
+  border: solid 1px white;
+  position: relative;
+  top: 33px;
+  left: 18px;
+  color: white;
+  text-align: center;
+}
+.bottom:hover{
+  background-color: #9dc15b;
+  cursor: pointer;
+}
+.right{
+  width: 50%;
+  height: 100%;
+}
+.right>img{
+  width: 100%;
+  height: 100%;
+}
+.footer{
+  background-image: url(images/world-map.png);
+  height: 451px;
+  width: 100%;
+  border: solid 1px;
+  background-color: black;
+  position: relative;
+  top:200px;
+}
+.footer-text{
+  color: #ffff;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 100px;
+}

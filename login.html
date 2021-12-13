@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="login.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<title>QuickCloud Hosting</title>
+</head>
+<body>
+	<header>
+		<div class="menu-bar">
+			<nav>
+				<a href="home.html"><img src="images/logo-hosting.png" alt="" class="logo"></a>
+				<ul>
+					<li><a href="home.html"style="color:#27ae60;">Home</a></li>
+					<li><a href="about_us.html">About Us</a></li>
+					<li><a href="Features.html">Features</a></li>
+					<li><a href="hosting.html" class="dropdown">Hosting</a>
+						<ul>
+							<li><a href="hosting.html">Web Hosting</a></li>
+							<li><a href="hosting.html">WordPress Hosting</a></li>
+							<li><a href="hosting.html">Cloud Server</a></li>
+							<li><a href="hosting.html">Reseller Package</a></li>
+							<li><a href="hosting.html">Dedicated Hosting</a></li>
+						</ul>	
+					</li>
+					<li><a href="domain.html">Domain</a></li>
+					<li><a href="pricing.html">Pricing</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="login.html" class="Customer-login">Customer login</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="box">
+		<h1> SIGN-IN </h1>
+		<form method="post" action="./loginedhome.html" name="login">
+   			<div class="labelInputArea">
+     			<label for="username">Username(*)</label>
+     			<input class="text" type="text" name="username" id="username" />
+	     	</div>
+	  		<div class="labelInputArea">
+	     		<label for="password">Password(*)</label>
+	     		<input class="text" type="password" name="password" id="password" />
+	     	</div>
+	        <p>
+	      		<label id="botton"></label>
+	      		<input type="submit" name="action" id="submit" value="Login" />
+	      	</p>
+		</form>
+		<a>Not a member yet, press <a href="javascript:void(0);" onclick="window.location.href='signup.html'">Sign Up</a>
+		<br>
+		<a href="#" id="forgotpass">Forgot your password</a>
+	</div>
+	<script type="text/javascript">
+
+		var inputs = document.forms['login'].getElementsByTagName('input');
+  		var run_onchange = false;
+  		function valid(){
+   			var errors = false;
+   			var reg_mail = /^[A-Za-z0-9]+([_\.\-]?[A-Za-z0-9])*@[A-Za-z0-9]+([\.\-]?[A-Za-z0-9]+)*(\.[A-Za-z]+)+$/;
+   			for(var i=0; i<inputs.length; i++){
+	    		var value = inputs[i].value;
+	    		var id = inputs[i].getAttribute('id');   
+	    		// Initialize span
+	    		var span = document.createElement('span');
+	    		// If span was exist then remove
+	    		var p = inputs[i].parentNode;
+	    		if(p.lastChild.nodeName == 'SPAN') {p.removeChild(p.lastChild);}
+	   			// Check empty issue
+	    		if(value == ''){
+	     			span.innerHTML ='Must be completed';
+	    		}else{
+	    			//Check other issue
+	     			if(id == 'password'){
+	      				if(value.length <6){span.innerHTML ='Password must have at least 6 letters';}
+	      				var pass =value;
+	     			}
+	    		}
+	    		//If have errors then run onchange, submit return false, highlight border
+	    		if(span.innerHTML != ''){
+	     			inputs[i].parentNode.appendChild(span);
+	     			errors = true;
+	     			run_onchange = true;
+	     			inputs[i].style.border = '1px solid #c6807b';
+	     			inputs[i].style.background = '#fffcf9';
+	    		}
+   			}// end for
+  
+   			if(errors == false) {
+   				alert('Welcome back!!');
+   				window.location.href = "./loginedhome.html";
+   			}
+   			return !errors;
+  		}// end valid()
+
+  		// Run valid()
+  		var register = document.getElementById('submit');
+  		register.onclick = function(){
+   			return valid();
+  		}
+ 
+  		// Onchange event
+   		for(var i=0; i<inputs.length; i++){
+    		var id = inputs[i].getAttribute('id');
+    		inputs[i].onchange = function(){
+     			if(run_onchange == true){
+      				this.style.border = '1px solid #999';
+      				this.style.background = '#fff';
+      				valid();
+     			}
+    		}
+
+   		}// end for
+
+   		$(function(){ //ready function
+    		$('#forgotpass').click(function(){ //click event
+         		alert("We have e-mailed your password reset link!");
+    		});
+		})
+
+	</script>
